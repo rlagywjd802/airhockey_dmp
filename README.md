@@ -1,2 +1,2 @@
 # airhockey_dmp
-[Screenshot](/poster/Poster.jpg) 
+![Screenshot](/poster/Poster.jpg) 
