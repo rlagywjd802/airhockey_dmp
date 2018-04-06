@@ -252,90 +252,90 @@ for i = 0 : dt : tf
 end
 
 
-% % Plot the graph of end-effector
-% figure(2)
-% subplot(2,1,1)
-% plot(T, y_d(:,1), 'g', T, x1_save, 'b', 'linewidth', 0.8)
-% title('< End-effector Desired Position >')
-% legend('x (m)', 'y (m)')
-% xlabel('t (sec)')
-% ylabel('x (m)')
-% xlim([0 tf])
-% subplot(2,1,2)
-% plot(T, y_d(:,2), 'g',  T, x2_save, 'b', 'linewidth', 0.8)
-% title('< End-effector Position >')
-% legend('x (m)', 'y (m)')
-% xlabel('t (sec)')
-% ylabel('x (m)')
-% xlim([0 tf])
-% 
-% figure(3)
-% subplot(2,1,1)
-% plot(T, dy_d(:,1), 'g', T, dx1_save, 'b', 'linewidth', 0.8)
-% title('< End-effector Desired Velocity >')
-% legend('x (m/s)', 'y (m/s)')
-% xlabel('t (sec)')
-% ylabel('x (m)')
-% xlim([0 tf])
-% subplot(2,1,2)
-% plot(T, dy_d(:,2), 'g', T, dx2_save, 'b', 'linewidth', 0.8)
-% title('< End-effector Velocity >')
-% legend('x (m/s^2)', 'y (m/s^2)')
-% xlabel('t (sec)')
-% ylabel('x (m)')
-% xlim([0 tf])
-% 
-% figure(4)
-% subplot(2,1,1)
-% plot(T, ddy_d(:,1), 'g', T, ddx1_save, 'b', 'linewidth', 0.8)
-% title('< End-effector Desired Acceleration >')
-% legend('x (m/s)', 'y (m/s)')
-% xlabel('t (sec)')
-% ylabel('x (m)')
-% xlim([0 tf])
-% subplot(2,1,2)
-% plot(T, ddy_d(:,2), 'g', T, ddx2_save, 'b', 'linewidth', 0.8)
-% title('< End-effector Acceleration >')
-% legend('x (m/s^2)', 'y (m/s^2)')
-% xlabel('t (sec)')
-% ylabel('x (m)')
-% xlim([0 tf])
-% 
-% figure(5)
-% subplot(2,1,1)
-% plot(T, f_ref(:,1), 'g', T, f1_save, 'b', 'linewidth', 0.8)
-% title('< Reference Force >')
-% legend('x (m/s)', 'y (m/s)')
-% xlabel('t (sec)')
-% ylabel('x (m)')
-% xlim([0 tf])
-% subplot(2,1,2)
-% plot(T, f_ref(:,2), 'g', T, f2_save, 'b', 'linewidth', 0.8)
-% title('< Force >')
-% legend('x (m/s^2)', 'y (m/s^2)')
-% xlabel('t (sec)')
-% ylabel('x (m)')
-% xlim([0 tf])
-% 
-% figure(6)
-% out = zeros(timestep, n_bfs, n_dofs);
-% sum = zeros(timestep);
-% for n=1:n_dofs
-%     for b=1:n_bfs
-%         out(:, b, n) = psi(:, b) * w(n, b).*z(:);
-%         sum = sum + psi(:, b);
-%     end
-% end
-% subplot(2,1,1)
-% plot(T, psi);
-% subplot(2,1,2)
-% plot(T, out(:, :, 1))
-% 
-% figure(7)
-% subplot(2,1,1)
-% plot(T, z);
-% subplot(2,1,2)
-% plot(T, sum);
+% Plot the graph of end-effector
+figure(2)
+subplot(2,1,1)
+plot(T, y_d(:,1), 'g', T, x1_save, 'b', 'linewidth', 0.8)
+title('< End-effector Desired Position >')
+legend('x (m)', 'y (m)')
+xlabel('t (sec)')
+ylabel('x (m)')
+xlim([0 tf])
+subplot(2,1,2)
+plot(T, y_d(:,2), 'g',  T, x2_save, 'b', 'linewidth', 0.8)
+title('< End-effector Position >')
+legend('x (m)', 'y (m)')
+xlabel('t (sec)')
+ylabel('x (m)')
+xlim([0 tf])
+
+figure(3)
+subplot(2,1,1)
+plot(T, dy_d(:,1), 'g', T, dx1_save, 'b', 'linewidth', 0.8)
+title('< End-effector Desired Velocity >')
+legend('x (m/s)', 'y (m/s)')
+xlabel('t (sec)')
+ylabel('x (m)')
+xlim([0 tf])
+subplot(2,1,2)
+plot(T, dy_d(:,2), 'g', T, dx2_save, 'b', 'linewidth', 0.8)
+title('< End-effector Velocity >')
+legend('x (m/s^2)', 'y (m/s^2)')
+xlabel('t (sec)')
+ylabel('x (m)')
+xlim([0 tf])
+
+figure(4)
+subplot(2,1,1)
+plot(T, ddy_d(:,1), 'g', T, ddx1_save, 'b', 'linewidth', 0.8)
+title('< End-effector Desired Acceleration >')
+legend('x (m/s)', 'y (m/s)')
+xlabel('t (sec)')
+ylabel('x (m)')
+xlim([0 tf])
+subplot(2,1,2)
+plot(T, ddy_d(:,2), 'g', T, ddx2_save, 'b', 'linewidth', 0.8)
+title('< End-effector Acceleration >')
+legend('x (m/s^2)', 'y (m/s^2)')
+xlabel('t (sec)')
+ylabel('x (m)')
+xlim([0 tf])
+
+figure(5)
+subplot(2,1,1)
+plot(T, f_ref(:,1), 'g', T, f1_save, 'b', 'linewidth', 0.8)
+title('< Reference Force >')
+legend('x (m/s)', 'y (m/s)')
+xlabel('t (sec)')
+ylabel('x (m)')
+xlim([0 tf])
+subplot(2,1,2)
+plot(T, f_ref(:,2), 'g', T, f2_save, 'b', 'linewidth', 0.8)
+title('< Force >')
+legend('x (m/s^2)', 'y (m/s^2)')
+xlabel('t (sec)')
+ylabel('x (m)')
+xlim([0 tf])
+
+figure(6)
+out = zeros(timestep, n_bfs, n_dofs);
+sum = zeros(timestep);
+for n=1:n_dofs
+    for b=1:n_bfs
+        out(:, b, n) = psi(:, b) * w(n, b).*z(:);
+        sum = sum + psi(:, b);
+    end
+end
+subplot(2,1,1)
+plot(T, psi);
+subplot(2,1,2)
+plot(T, out(:, :, 1))
+
+figure(7)
+subplot(2,1,1)
+plot(T, z);
+subplot(2,1,2)
+plot(T, sum);
 
 figure(8)
 % title('Animation')
