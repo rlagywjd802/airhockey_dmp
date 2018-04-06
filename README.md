@@ -1,2 +1,2 @@
 # airhockey_dmp
-# ![ex_screenshot](./poster/Poster.jpg) 
+# ![Alt text](./poster/Poster.jpg) 
